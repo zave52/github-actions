@@ -42,6 +42,8 @@ jobs:
           echo "Build Successful!"
 
       - name: Update README.md with build badge
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [ -f README.md ] && ! grep -q "workflow-badge" README.md; then
             badge='![workflow-badge](https://github.com/${{ github.repository }}/actions/workflows/workflow.yml/badge.svg)'
@@ -52,5 +54,5 @@ jobs:
           
             git add README.md
             git commit -m "Add workflow badge to README.md [skip ci]"
-            git push origin HEAD:${GITHUB_REF_NAME}
+            git push
           fi
