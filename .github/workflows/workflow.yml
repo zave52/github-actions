@@ -51,7 +51,7 @@ jobs:
         run: |
           if [ -f README.md ] && ! grep -q "workflow-badge" README.md; then
             badge='![workflow-badge](https://github.com/${{ github.repository }}/actions/workflows/workflow.yml/badge.svg)'
-            sed -i "2i $badge/" README.md
+            sed -i "2i $badge" README.md
           
             git config --local user.email "actions@github.com"
             git config --local user.name "GitHub Action"
