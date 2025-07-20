@@ -52,5 +52,5 @@ jobs:
           
             git add README.md
             git commit -m "Add workflow badge to README.md [skip ci]"
-            git push
+            git push origin HEAD:${GITHUB_REF_NAME}
           fi
