@@ -1,4 +1,5 @@
 # GitHub Actions test
+![workflow-badge](https://github.com/zave52/github-actions/actions/workflows/workflow.yml/badge.svg)/
 
 ## Description
 
