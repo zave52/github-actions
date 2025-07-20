@@ -3,7 +3,7 @@ def add(num1: int | float, num2: int | float) -> int | float:
 
 
 def subtract(num1: int | float, num2: int | float) -> int | float:
-    return num1 - num2
+    return round(num1 - num2, 2)
 
 
 if __name__ == "__main__":
